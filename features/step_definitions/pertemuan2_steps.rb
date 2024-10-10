@@ -8,13 +8,15 @@ end
 
 When('I click the login button on the login page') do
   find(:xpath, "//input[@id='login-button']").click
-  sleep 3
 end
 
-When('I click the add to cart button for the product {string} on the inventory page') do |string|
+
+When('I click the add to cart button for the product {string} on the inventory page') do |product_name|
   find(:xpath, "//div[div/a/div[text()='#{product_name}']]//button[contains(text(),'Add to cart')]").click
 end
 
-Then('I can see remove button for the product {string} on the inventory page') do |string|
-  find(:xpath, "//div[contains(@class, 'inventory_item')]//div[text()='#{product_name}']/ancestor::div[contains(@class, 'inventory_item')]//button[contains(text(), 'Remove')]").should be_visible
+Then('I can see remove button for the product {string} on the inventory page') do |product_name|
+  selector = "//div[contains(@class, 'inventory_item')]//div[text()='#{product_name}']/ancestor::div[contains(@class, 'inventory_item')]//button[contains(text(), 'Remove')]"
+  find(:xpath, selector).should be_visible
+  sleep 4
 end

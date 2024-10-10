@@ -18,3 +18,7 @@ end
 AfterStep do
   sleep 1
 end
+
+at_exit do
+  puts "GENERATE REPORT"
+end

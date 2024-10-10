@@ -1,7 +1,7 @@
 Feature: Inventory functionality
 
-    @pertemuan-2 @case-3
-    Scenario: As a user, I want to add to cart products
+  @pertemuan-2 @case-3
+  Scenario: As a User, I want to add to cart a product
     Given I am on the login page
     When I enter username as "standard_user" on the login page
     And I enter password as "secret_sauce" on the login page
