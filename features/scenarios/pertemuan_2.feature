@@ -7,5 +7,5 @@ Feature: Inventory functionality
     And I enter password as "secret_sauce" on the login page
     And I click the login button on the login page
     Then I should be logged in to the application
-    When I click the add to cart button for the product {string} on the inventory page
-    Then I can see remove button for the product {string} on the inventory page
+    When I click the add to cart button for the product "Sauce Labs Backpack" on the inventory page
+    Then I can see remove button for the product "Sauce Labs Backpack" on the inventory page
