@@ -1,3 +1,4 @@
+@login
 Feature: Login functionality
 
   @pertemuan-1 @regression @positive @case-1
