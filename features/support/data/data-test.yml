@@ -1,2 +1,2 @@
-VALID_USERNAME = standard_user
-VALID_PASSWORD = Secret_sauce
+VALID_USERNAME: standard_user
+VALID_PASSWORD: secret_sauce
