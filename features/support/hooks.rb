@@ -18,8 +18,10 @@ end
 
 AfterStep do
   sleep 1
+  take_screenshot
 end
 
 at_exit do
   puts "GENERATE REPORT"
+  generate_report
 end
