@@ -46,7 +46,7 @@ Capybara.register_driver :firefox do |app|
 end
 
 Capybara.configure do |config|
-  config.default_driver = :firefox
+  config.default_driver = :chrome
   config.default_max_wait_time = 30
 end
 
