@@ -2,7 +2,7 @@ name: Automation test scheduler
 
 on:
   schedule:
-    - cron: "* 13 * * * *"
+    - cron: "0 13 * * *"
   workflow_dispatch:
 
 jobs:
@@ -18,7 +18,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1.2
+          ruby-version: 3.3.4
 
       - name: Setup Firefox
         uses: browser-actions/setup-firefox@latest
@@ -31,7 +31,7 @@ jobs:
           bundle install
 
       - name: Run Capybara tests
-        run: cucumber -t @login BROWSER=firefox HEADLESS=yes PRIVATE=yes --publish
+        run: cucumber -t '@pertemuan-4' BROWSER=firefox HEADLESS=yes PRIVATE=yes --publish
 
       - name: Upload screenshots
         uses: actions/upload-artifact@v3
