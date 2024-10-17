@@ -2,8 +2,8 @@ require 'capybara/cucumber'
 require 'capybara/rspec'
 require 'cucumber'
 require 'dotenv'
-require 'rspec'
 require 'report_builder'
+require 'rspec'
 require 'selenium-webdriver'
 require 'site_prism'
 require 'yaml'
@@ -12,13 +12,13 @@ Dotenv.load
 
 Capybara.register_driver :chrome do |app|
   options = Selenium::WebDriver::Chrome::Options.new
-  if ENV['INCOGNITO'] == 'yes'
-    options.add_argument('--incognito')
-  end
-  
-  if ENV['HEADLESS'] == 'yes'
+
+  if ENV['HEADLESS'].downcase == 'yes'
     options.add_argument('--headless')
-    options.add_argument('--disable-gpu')
+  end
+
+  if ENV['PRIVATE'].downcase == 'yes'
+    options.add_argument('--incognito')
   end
 
   Capybara::Selenium::Driver.new(
@@ -31,12 +31,13 @@ end
 
 Capybara.register_driver :firefox do |app|
   options = Selenium::WebDriver::Firefox::Options.new
-  if ENV['PRIVATE'].downcase == 'yes'
-    options.add_argument('-private-window')
-  end
-  
-  if ENV['HEADLESS'].downcase  == 'yes'
+
+  if ENV['HEADLESS'].downcase == 'yes'
     options.add_argument('--headless')
+  end
+
+  if ENV['PRIVATE'].downcase == 'yes'
+    options.add_argument('-private')
   end
 
   Capybara::Selenium::Driver.new(
@@ -48,7 +49,7 @@ Capybara.register_driver :firefox do |app|
 end
 
 Capybara.configure do |config|
-  config.default_driver = :chrome
+  config.default_driver = (ENV['BROWSER'] || 'firefox').to_sym
   config.default_max_wait_time = 30
 end
 
@@ -58,8 +59,9 @@ def get_data_test_single_env(key)
   return file[key]
 end
 
-# multi env 
+# multy env
 def get_data_test(key)
+  target = 
   file = YAML.load_file("features/support/data/data-test-#{ ENV['TARGET'].downcase }.yml")
   return file[key]
 end
@@ -75,6 +77,7 @@ def generate_report
   end
   ReportBuilder.build_report
 end
+
 
 def take_screenshot
   # Define the directory where screenshots will be saved
