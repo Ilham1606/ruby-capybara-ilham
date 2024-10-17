@@ -2,7 +2,7 @@ name: Automation test scheduler
 
 on:
   schedule:
-    - cron: "* 13 * * * *"
+    - cron: "0 13 * * *"
   workflow_dispatch:
 
 jobs:
@@ -31,7 +31,7 @@ jobs:
           bundle install
 
       - name: Run Capybara tests
-        run: cucumber -t @login BROWSER=firefox HEADLESS=yes PRIVATE=yes --publish
+        run: cucumber -t '@pertemuan-4' BROWSER=firefox HEADLESS=yes PRIVATE=yes --publish
 
       - name: Upload screenshots
         uses: actions/upload-artifact@v3
