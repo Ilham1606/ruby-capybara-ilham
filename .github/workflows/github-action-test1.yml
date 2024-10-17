@@ -7,7 +7,7 @@ on:
 
 jobs:
   automation-test:
-    name: Automation test Ruby Capybara (wele)
+    name: Automation test Ruby Capybara
     runs-on: ubuntu-latest
 
     steps:
