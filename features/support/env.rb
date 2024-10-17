@@ -37,7 +37,7 @@ Capybara.register_driver :firefox do |app|
   end
 
   if ENV['PRIVATE'].downcase == 'yes'
-    options.add_argument('--private')
+    options.add_argument('--incognito')
   end
 
   Capybara::Selenium::Driver.new(

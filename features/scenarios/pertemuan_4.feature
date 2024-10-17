@@ -3,8 +3,8 @@ Feature: Inventory functionality
   @pertemuan-4 @regression @case-8
   Scenario: [PAGE OBJECT] As a user, I want to be able to login to the application with my credentials
     Given [PAGE OBJECT] I am on the login page
-    When [PAGE OBJECT] I enter username as "VALID_USERNAME3" on the login page
-    And [PAGE OBJECT] I enter password as "VALID_PASSWORDss" on the login page
+    When [PAGE OBJECT] I enter username as "VALID_USERNAME" on the login page
+    And [PAGE OBJECT] I enter password as "VALID_PASSWORD" on the login page
     And [PAGE OBJECT] I click the login button on the login page
     Then [PAGE OBJECT] I should be logged in to the application
 
