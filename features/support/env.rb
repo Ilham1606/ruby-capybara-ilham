@@ -37,7 +37,7 @@ Capybara.register_driver :firefox do |app|
   end
 
   if ENV['PRIVATE'].downcase == 'yes'
-    options.add_argument('-private')
+    options.add_argument('--private')
   end
 
   Capybara::Selenium::Driver.new(
@@ -61,7 +61,6 @@ end
 
 # multy env
 def get_data_test(key)
-  target = 
   file = YAML.load_file("features/support/data/data-test-#{ ENV['TARGET'].downcase }.yml")
   return file[key]
 end
