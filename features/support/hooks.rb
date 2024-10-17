@@ -6,6 +6,10 @@ end
 
 After do |scenario|
   puts "INI HOOKS AFTER"
+
+  if scenario.failed?
+    take_screenshot
+  end
 end
 
 Before('@case-3') do
@@ -18,7 +22,6 @@ end
 
 AfterStep do
   sleep 1
-  take_screenshot
 end
 
 at_exit do
