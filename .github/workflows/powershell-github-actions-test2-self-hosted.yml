@@ -1,4 +1,4 @@
-name: Automation test scheduler
+name: Automation test scheduler Self-Hosed Power Shell
 
 on:
   schedule:
