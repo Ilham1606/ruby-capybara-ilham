@@ -8,7 +8,9 @@ on:
 jobs:
   automation-test:
     name: Automation test Ruby Capybara
-    runs-on: ubuntu-latest
+    runs-on:
+      - self-hosted
+      - ilham-pc
 
     steps:
       - uses: actions/checkout@v3
