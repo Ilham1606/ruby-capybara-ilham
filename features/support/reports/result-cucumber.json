@@ -24,7 +24,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1731959800
+              "duration": 870777000
             },
             "after": [
               {
@@ -33,7 +33,7 @@
                 },
                 "result": {
                   "status": "passed",
-                  "duration": 1005641900
+                  "duration": 1001121500
                 }
               }
             ]
@@ -47,7 +47,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 161611900
+              "duration": 142060600
             },
             "after": [
               {
@@ -56,7 +56,7 @@
                 },
                 "result": {
                   "status": "passed",
-                  "duration": 1004814300
+                  "duration": 1012270500
                 }
               }
             ]
@@ -70,7 +70,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 119067400
+              "duration": 93668900
             },
             "after": [
               {
@@ -79,7 +79,7 @@
                 },
                 "result": {
                   "status": "passed",
-                  "duration": 1005402600
+                  "duration": 1013725600
                 }
               }
             ]
@@ -93,7 +93,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 194689500
+              "duration": 297215200
             },
             "after": [
               {
@@ -102,7 +102,7 @@
                 },
                 "result": {
                   "status": "passed",
-                  "duration": 1009239700
+                  "duration": 1013229200
                 }
               }
             ]
@@ -116,7 +116,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 347565900
+              "duration": 424297600
             },
             "after": [
               {
@@ -125,7 +125,7 @@
                 },
                 "result": {
                   "status": "passed",
-                  "duration": 1003230800
+                  "duration": 1013430800
                 }
               }
             ]
@@ -152,7 +152,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 53600
+              "duration": 27800
             }
           },
           {
@@ -161,7 +161,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 41400
+              "duration": 20000
             }
           },
           {
@@ -170,7 +170,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2066546300
+              "duration": 7296387100
             }
           }
         ],
@@ -181,7 +181,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 315200
+              "duration": 275100
             }
           },
           {
@@ -190,7 +190,467 @@
             },
             "result": {
               "status": "passed",
-              "duration": 135192500
+              "duration": 172073800
+            }
+          }
+        ]
+      },
+      {
+        "id": "inventory-functionality;[examples]-as-a-user,-i-want-to-add-to-cart-a-product;;2",
+        "keyword": "Scenario Outline",
+        "name": "[Examples] As a User, I want to add to cart a product",
+        "description": "",
+        "line": 23,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "[PAGE OBJECT] I am on the login page",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/pertemuan_4_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 157035300
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:23"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 1000062600
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "[PAGE OBJECT] I enter username as \"VALID_USERNAME\" on the login page",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/pertemuan_4_steps.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 109213100
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:23"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 1015512400
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "[PAGE OBJECT] I enter password as \"VALID_PASSWORD\" on the login page",
+            "line": 15,
+            "match": {
+              "location": "features/step_definitions/pertemuan_4_steps.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 120325900
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:23"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 1014915200
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "[PAGE OBJECT] I click the login button on the login page",
+            "line": 16,
+            "match": {
+              "location": "features/step_definitions/pertemuan_4_steps.rb:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 312755000
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:23"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 1013687500
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "[PAGE OBJECT] I should be logged in to the application",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/pertemuan_4_steps.rb:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 329461400
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:23"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 1012987000
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "[PAGE OBJECT] I click the add to cart button for the product \"Sauce Labs Bike Light\" on the inventory page",
+            "line": 18,
+            "match": {
+              "location": "features/step_definitions/pertemuan_4_steps.rb:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 284040200
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:23"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 1013562500
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "[PAGE OBJECT] I can see remove button for the product \"Sauce Labs Bike Light\" on the inventory page",
+            "line": 19,
+            "match": {
+              "location": "features/step_definitions/pertemuan_4_steps.rb:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 44796000
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:23"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 1014156500
+                }
+              }
+            ]
+          }
+        ],
+        "tags": [
+          {
+            "name": "@pertemuan-4",
+            "line": 11
+          },
+          {
+            "name": "@case-9",
+            "line": 11
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.40.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29400
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.40.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17600
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 242613800
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 503900
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.40.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 170991300
+            }
+          }
+        ]
+      },
+      {
+        "id": "inventory-functionality;[examples]-as-a-user,-i-want-to-add-to-cart-a-product;;3",
+        "keyword": "Scenario Outline",
+        "name": "[Examples] As a User, I want to add to cart a product",
+        "description": "",
+        "line": 24,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "[PAGE OBJECT] I am on the login page",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/pertemuan_4_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 203162600
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:23"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 1014229000
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "[PAGE OBJECT] I enter username as \"VALID_USERNAME\" on the login page",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/pertemuan_4_steps.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 109649600
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:23"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 1014228800
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "[PAGE OBJECT] I enter password as \"VALID_PASSWORD\" on the login page",
+            "line": 15,
+            "match": {
+              "location": "features/step_definitions/pertemuan_4_steps.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 92853400
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:23"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 1000029100
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "[PAGE OBJECT] I click the login button on the login page",
+            "line": 16,
+            "match": {
+              "location": "features/step_definitions/pertemuan_4_steps.rb:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 310602000
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:23"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 1000038100
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "[PAGE OBJECT] I should be logged in to the application",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/pertemuan_4_steps.rb:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 328995300
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:23"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 1014156000
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "[PAGE OBJECT] I click the add to cart button for the product \"Sauce Labs Fleece Jacket\" on the inventory page",
+            "line": 18,
+            "match": {
+              "location": "features/step_definitions/pertemuan_4_steps.rb:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 264631400
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:23"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 1000034000
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "[PAGE OBJECT] I can see remove button for the product \"Sauce Labs Fleece Jacket\" on the inventory page",
+            "line": 19,
+            "match": {
+              "location": "features/step_definitions/pertemuan_4_steps.rb:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46961000
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:23"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 1012246400
+                }
+              }
+            ]
+          }
+        ],
+        "tags": [
+          {
+            "name": "@pertemuan-4",
+            "line": 11
+          },
+          {
+            "name": "@case-9",
+            "line": 11
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.40.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 44600
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.40.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18700
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 246964900
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 454000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.40.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 171506000
             }
           }
         ]
