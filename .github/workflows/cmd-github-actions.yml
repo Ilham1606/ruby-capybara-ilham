@@ -1,0 +1,50 @@
+name: Automation test scheduler
+
+on:
+  schedule:
+    - cron: 0 */5 * * *
+  workflow_dispatch:
+
+jobs:
+  automation-test:
+    name: Automation test Ruby Capybara
+    runs-on:
+      - self-hosted
+      - ilham-pc
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: main
+
+      # - name: Set up Ruby
+      #   uses: ruby/setup-ruby@v1
+      #   with:
+      #     ruby-version: 3.3.4
+
+      # - name: Setup Firefox
+      #   uses: browser-actions/setup-firefox@latest
+      #   with:
+      #     firefox-version: latest
+
+      - name: Install dependencies
+        shell: cmd
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Run Capybara tests
+        shell: cmd
+        run: cucumber -t '@pertemuan-4' BROWSER=firefox HEADLESS=no PRIVATE=yes --publish
+
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-screenshots
+          path: features/support/reports/screenshot/*.png
+
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-report
+          path: features/support/reports/test_result_*.html
