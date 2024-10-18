@@ -1,4 +1,4 @@
-name: Automation test scheduler
+name: Automation test scheduler CMD
 
 on:
   schedule:
